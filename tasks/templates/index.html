@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <script src="https://kit.fontawesome.com/152ca9cf76.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="nav-list">
+                <h2 class="logo">ToDo<span>App</span></h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <p>Welcome, <span>{{user.username}}</span></p>
+                        </li>
+                        <li><a href="/logout/" class="btn" id="login">LogOut</a></li>
+                        <!-- <li><a href="#" class="btn" id="signup">SignUp</a></li> -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="column-1">
+                    <form method="POST" action="/addTask/" class="todo-form">
+                        {% csrf_token %}
+                        {{ form.task }}
+                        <input type="submit" class="btn" value="Add Task">
+                    </form>
+                </div>
+                <div class="column-2">
+                    <div class="head flex justify-between">
+                        <h2>To-Do List</h2>
+                        <p>Date:- <span>09 May 2021</span></p>
+                    </div>
+                    {% for task_name in all_task %}
+                    <div class="list flex justify-between">
+                        {% if task_name.complete %}
+                        <strike>{{task_name.task}}</strike>
+                        <div class="buttons">
+                        <a href="{% url 'deleteTask' task_name.id %}" class="del">Delete</a>
+                    </div>
+                        {% else %}
+                        <p>{{task_name.task}}</p>
+                        <div class="buttons">
+                        <a href="{% url 'completeTask' task_name.id %}" class="com">Complete</a>
+                        <a href="{% url 'deleteTask' task_name.id %}" class="del">Delete</a>
+                    </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    <!-- </div> -->
+                    <!-- <div class="list flex justify-between">
+                        <p>Edit Video</p>
+                        <div class="buttons">
+                            <a href="#" class="com">Complete</a>
+                            <a href="#" class="del">Delete</a>
+                        </div>
+                    </div>
+                    <div class="list flex justify-between">
+                        <p>Attend Workshop</p>
+                        <div class="buttons">
+                            <a href="#" class="com">Complete</a>
+                            <a href="#" class="del">Delete</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

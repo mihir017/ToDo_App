@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --logo_font : 'Shadows Into Light', cursive;
+    --main-font : 'New Tegomin', serif;
+    --primary-color: rgb(17, 122, 141);
+    --secondary-color: rgb(8, 56, 65);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 783px;
+    margin: 0 auto;
+}
+.navbar {
+    background-color: var(--primary-color);
+    height: 50px;
+    padding-top: 5px;
+}
+
+.logo{
+    font-family: var(--logo_font);
+    font-size: 25px;
+    color: beige;
+}
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+li p{
+    font-family: var(--main-font);
+    font-size: 16px;
+    margin-right: 15px;
+    color: beige;
+    /* border-bottom: 1px solid beige; */
+}
+li p span{
+    font-family: var(--logo_font);
+    font-size: 18px;
+}
+a.btn{
+    font-family: var(--main-font);
+    padding: 4px 20px;
+    color: beige;
+    font-size: 14px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid beige;
+    font-weight: bold;
+}
+#login{
+    margin-right: 6px;
+}
+#login:hover{
+    background-color: beige;
+    color: var(--primary-color);
+}
+
+/* section */
+
+.row{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 2px;
+}
+.column-1{
+    /* background-color: aqua; */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.column-2{
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+}
+
+.section {
+    margin-top: 40px;
+}
+/* column-1 */
+.column-1 .todo-form{
+    padding: 10px;
+}
+.column-1 .todo-form .task_input{
+    padding: 8px 10px;
+    font-family: var(--main-font);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/* input{
+    display: block;
+}
+.column-1 .todo-form .task_input{
+    padding: 8px 10px;
+    font-family: var(--main-font);
+    color: var(--primary-color);
+    outline: none;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+} */
+.btn{
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: beige;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* coulmn-2 */
+
+.column-2 h2{
+    font-family: var(--main-font);
+    font-size: 26px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+.column-2 .head p{
+    font-size: 20px;
+    font-family: var(--main-font);
+    color:var(--secondary-color);
+    margin-bottom: 10px;
+}
+.column-2 .head p span{
+    font-size: 18px;
+    font-family: var(--logo_font);
+    color:var(--secondary-color);
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.column-2 .list{
+ padding: 10px ;
+ margin-bottom: 10px;
+ border-radius: 5px;
+ background-color: var(--primary-color);
+ color: beige;
+ border: 1px solid var(--primary-color);
+}
+.column-2 .list p{
+    font-family: var(--main-font);
+}
+.column-2 .list .buttons a{
+    text-decoration: none;
+    /* color: beige; */
+    margin-right: 5px;
+    border: 1px solid beige;
+    padding: 5px 15px;
+    font-size: 12px;
+    border-radius: 20px;   
+}
+.com{
+    color: beige;
+}
+.com:hover{
+    background-color: beige;
+    color: var(--primary-color);
+}
+.del:hover{
+    background-color: var(--primary-color);
+    color: beige;
+}
+.del{
+    background-color: beige;
+    color: var(--primary-color);
+}

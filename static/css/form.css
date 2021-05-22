@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --logo_font : 'Shadows Into Light', cursive;
+    --main-font : 'New Tegomin', serif;
+    --primary-color: rgb(17, 122, 141);
+    --secondary-color: rgb(8, 56, 65);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 783px;
+    margin: 0 auto;
+}
+.navbar {
+    background-color: var(--primary-color);
+    height: 50px;
+    padding-top: 5px;
+}
+
+.logo{
+    font-family: var(--logo_font);
+    font-size: 25px;
+    color: beige;
+}
+
+/* section */
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2px;
+}
+.column-1{
+    /* background-color: aqua; */
+    width: 80%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.column-2{
+    /* background-color: aquamarine; */
+    width: 80%;
+    border: 1px solid gray;
+    padding: 20px;
+    border-radius: 5px;
+}
+.section {
+    margin-top: 40px;
+}
+label{
+    font-family: var(--main-font);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.btn{
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: beige;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: var(--main-font);
+    cursor: pointer;
+    margin: 20px 0;
+    width: 50%;
+}
+input{
+    display: block;
+    width: 80%;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    font-family: var(--main-font);
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.row h2{
+    font-family: var(--main-font);
+    margin-bottom: 10px;
+}
